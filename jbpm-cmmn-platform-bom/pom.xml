@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.jbpm</groupId>
+    <artifactId>jbpm-cmmn-parent-metadata</artifactId>
+    <version>6.4.0-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>jbpm-cmmn-platform-bom</artifactId>
+  <packaging>pom</packaging>
+
+  <name>jBPM CMMN platform BOM</name>
+  <description>
+    The BOM declares all (internal + 3rd party) dependency versions in dependencyManagement for the jBPM CMMN extensions.
+    All modules should (transitively) import this BOM, except for the user-facing BOMs (which are used here).
+  </description>
+
+  <!-- IMPORTANT: Do not declare any properties here! Declare them in kie-parent-metadata. This way the properties
+       will be at single place and can be shared between the BOMs and all the other modules. -->
+  <properties/>
+
+  <!-- IMPORTANT: Do not declare any build configuration here! Declare it in kie-parent-metadata. -->
+  <build/>
+
+  <!-- IMPORTANT: Do not declare any dependencies here! This is a platform BOM and such should
+       declare only dependency versions (the dependencyManagement section). -->
+  <dependencies/>
+
+  <dependencyManagement>
+    <dependencies>
+      <!-- ################################################################################ -->
+      <!-- Internal dependencies -->
+      <!-- ################################################################################ -->
+      <dependency>
+        <groupId>org.jbpm</groupId>
+        <artifactId>jbpm-cmmn-bom</artifactId>
+        <version>${project.version}</version>
+        <scope>import</scope>
+        <type>pom</type>
+      </dependency>
+      <!-- ################################################################################ -->
+      <!-- External dependencies -->
+      <!-- ################################################################################ -->
+
+      <dependency>
+        <groupId>de.malkusch.whois-server-list</groupId>
+        <artifactId>public-suffix-list</artifactId>
+        <version>2.0.1</version>
+      </dependency>
+      <dependency>
+        <groupId>org.eclipse.uml2</groupId>
+        <artifactId>org.eclipse.uml2.uml</artifactId>
+        <version>3.1.0.v201006071150</version>
+      </dependency>
+      <dependency>
+        <groupId>org.ops4j.pax.exam</groupId>
+        <artifactId>pax-exam-container-native</artifactId>
+        <version>3.4.0</version>
+      </dependency>
+      <dependency>
+        <groupId>org.ops4j.pax.exam</groupId>
+        <artifactId>pax-exam-link-mvn</artifactId>
+        <version>3.4.0</version>
+      </dependency>
+      <dependency>
+        <groupId>org.ops4j.pax.url</groupId>
+        <artifactId>pax-url-aether</artifactId>
+        <version>1.6.0</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>org.apache.felix.framework</artifactId>
+        <version>3.2.1</version>
+      </dependency>
+      <dependency>
+        <groupId>org.eclipse.tycho</groupId>
+        <artifactId>org.eclipse.osgi</artifactId>
+        <version>3.10.0.v20140606-1445</version>
+      </dependency>
+      <dependency>
+        <groupId>org.eclipse.uml2</groupId>
+        <artifactId>org.eclipse.uml2.uml</artifactId>
+        <version>3.1.0.v201006071150</version>
+      </dependency>
+      <dependency>
+        <groupId>cglib</groupId>
+        <artifactId>cglib</artifactId>
+        <version>2.2.2</version>
+      </dependency>
+      <dependency>
+        <groupId>javax.transaction</groupId>
+        <artifactId>jta</artifactId>
+        <version>1.1</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.jackrabbit</groupId>
+        <artifactId>jackrabbit-jcr-commons</artifactId>
+        <version>2.9.0</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache</groupId>
+        <artifactId>jackrabbit-ocm</artifactId>
+        <version>2.0.0</version>
+        <exclusions>
+          <exclusion>
+            <artifactId>cglib</artifactId>
+            <groupId>cglib</groupId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.jackrabbit</groupId>
+        <artifactId>jackrabbit-api</artifactId>
+        <version>2.9.0</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.jackrabbit</groupId>
+        <artifactId>jackrabbit-core</artifactId>
+        <version>2.9.0</version>
+        <exclusions>
+          <exclusion>
+            <groupId>org.apache.derby</groupId>
+            <artifactId>derby</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>commons-dbcp</groupId>
+            <artifactId>commons-dbcp</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+      <!-- Overriding KIE's default because Jackrabbit cannot work with 4 -->
+      <!--dependency>
+        <groupId>org.apache.lucene</groupId>
+        <artifactId>lucene-core</artifactId>
+        <version>3.6.0</version>
+      </dependency-->
+      <dependency>
+        <groupId>de.malkusch.whois-server-list</groupId>
+        <artifactId>public-suffix-list</artifactId>
+        <version>2.0.1</version>
+      </dependency>
+    </dependencies>
+
+  </dependencyManagement>
+
+</project>

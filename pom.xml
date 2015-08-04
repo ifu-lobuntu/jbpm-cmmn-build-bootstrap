@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+<!--inherit as much as possible from the origin KIE projects-->
+    <groupId>org.kie</groupId>
+    <artifactId>kie-parent-with-dependencies</artifactId>
+    <version>6.4.0-SNAPSHOT</version>
+  </parent>
+
+  <groupId>org.jbpm</groupId>
+  <artifactId>jbpm-cmmn-parent-metadata</artifactId>
+  <packaging>pom</packaging>
+  <name>jBPM CMMN parent metadata</name>
+
+  <scm>
+    <connection>scm:git:git@github.com:ifu-lobuntu/jbpm-cmmn-build-bootstrap.git</connection>
+    <developerConnection>scm:git:git@github.com:ifu-lobuntu/jbpm-cmmn-build-bootstrap.git</developerConnection>
+    <url>https://github.com/ifu-lobuntu/jbpm-cmmn-build-bootstrap</url>
+  </scm>
+  <modules>
+    <module>jbpm-cmmn-bom</module>
+    <module>jbpm-cmmn-platform-bom</module>
+    <module>jbpm-cmmn-parent-with-dependencies</module>
+  </modules>
+</project>

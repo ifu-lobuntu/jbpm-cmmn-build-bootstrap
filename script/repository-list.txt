@@ -1,0 +1,8 @@
+jbpm-cmmn-build-bootstrap
+jbpm
+jbpm-cmmn
+jbpm-form-modeler
+jbpm-designer
+jbpm-designer-extensions
+jbpm-console-ng
+
