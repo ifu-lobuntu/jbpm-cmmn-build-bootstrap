@@ -77,11 +77,6 @@
       </dependency>
       <dependency>
         <groupId>org.jbpm</groupId>
-        <artifactId>jbpm-cmmn-task-jpa</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.jbpm</groupId>
         <artifactId>jbpm-cmmn-task-core</artifactId>
         <version>${project.version}</version>
       </dependency>
