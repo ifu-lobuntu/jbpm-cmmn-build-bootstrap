@@ -4,5 +4,6 @@ jbpm
 jbpm-form-modeler
 jbpm-designer
 jbpm-designer-extensions
+jbpm-nrp
 jbpm-console-ng
 
