@@ -2,6 +2,7 @@ jbpm-cmmn-build-bootstrap
 jbpm-cmmn
 jbpm
 jbpm-form-modeler
+jbpm-form-modeler-extensions
 jbpm-designer
 jbpm-designer-extensions
 jbpm-nrp

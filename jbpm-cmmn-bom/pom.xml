@@ -210,7 +210,7 @@
 <!--form-modeler extensions-->
       <dependency>
         <groupId>org.jbpm</groupId>
-        <artifactId>jbpm-form-modeler-lookup</artifactId>
+        <artifactId>jbpm-form-modeler-extensions</artifactId>
         <version>${project.version}</version>
       </dependency>
 
